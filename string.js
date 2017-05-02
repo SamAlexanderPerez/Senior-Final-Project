@@ -51,20 +51,59 @@ exports.containsUpper =function(str){
   }
   catch(e){
     console.log(e.message);
+    return hasUpper;
   }
 }
 
 
 exports.containsLower =function(str){
-
+  let hasLower=false;
+  try{
+    for(let b=0;b<str.length;b++;){
+      if(inRange(b,97,122)==true){
+        let hasUpper=true;
+        throw new PasswordMessage("Has lowercase character");
+      }
+    }
+    if(hasLower==false){
+      throw new PasswordMessage("Does not have lowercase character");
+    }
+  }
+  catch(e){
+    console.log(e.message);
+    return hasLower;
+  }
 }
 
 
 exports.containsNumerical =function(str){
-
+  let hasNumerical=false;
+  try{
+    for(let c=0;c<str.length;c++;){
+      if(inRange(c,48,57)==true){
+        let hasNumerical=true;
+        throw new PasswordMessage("Has a number");
+      }
+    }
+    if(hasNumerical==false){
+      throw new PasswordMessage("Does not have a number");
+    }
+  }
+  catch(e){
+    console.log(e.message);
+    return hasNumerical;
+  }
 }
 
 
 exports.containsSpecial =function(str){
-
+  let hasSpecial=false;
+  let special=[33,64,35,36,37,94,38,42];
+  try{
+    for(let d=0;d<str.length;d++;){
+      for(let e=0;e<special.length;e++;){
+        if d.charCodeAt(0)==e;
+      }
+    }
+  }
 }
