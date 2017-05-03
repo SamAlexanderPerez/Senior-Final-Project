@@ -102,7 +102,10 @@ exports.containsSpecial =function(str){
   try{
     for(let d=0;d<str.length;d++;){
       for(let e=0;e<special.length;e++;){
-        if d.charCodeAt(0)==e;
+        if(str.charCodeAt(0)==special[e]){
+          let hasSpecial=true;
+          throw new PasswordMessage("Has a special character");
+        }
       }
     }
   }
