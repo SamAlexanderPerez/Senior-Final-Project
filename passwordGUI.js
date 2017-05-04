@@ -12,7 +12,21 @@ function getString(){
         let passesAllChecks = true;
 
         //Conditional Statements here.
-
+        if(testString.checkLength==false){
+          passesAllChecks=false;
+        }
+        if(testString.containsUpper==false){
+          passesAllChecks=false;
+        }
+        if(testString.containsLower==false){
+          passesAllChecks=false;
+        }
+        if(testString.containsNumerical==false){
+          passesAllChecks=false;
+        }
+        if(testString.containsSpecial==false){
+          passesAllChecks=false;
+        }
 
         if(!passesAllChecks){
             console.log("\nTry again\n");
